@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Toolbar Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/lay_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/close_24px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/btn_close"
+                android:text="Edit profile"
+                android:textColor="@color/Black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/check_24px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line_toolbar"
+                android:elevation="1.5dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Profile Form Section -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Name -->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_name"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <!-- Username -->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_username"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <!-- Website -->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_website"
+                android:inputType="textWebEditText"
+                android:textSize="16sp" />
+
+            <!-- Bio -->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_bio"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:textSize="16sp" />
+
+            <!-- Email -->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_email"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp" />
+
+            <!-- Phone Number -->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_phone_number"
+                android:inputType="phone"
+                android:textSize="16sp" />
+
+            <!-- Gender Spinner -->
+            <Spinner
+                android:id="@+id/spi_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/gender_array"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

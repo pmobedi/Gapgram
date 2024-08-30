@@ -8,4 +8,22 @@
     <!-- Formats for likes and comments -->
     <string name="likes_format">%d likes</string>
     <string name="comments_format">View all %d comments</string>
+    <!-- توضیحات دکمه بستن -->
+    <string name="close">Close</string>
+
+    <!-- رشته‌های مربوط به فرم پروفایل -->
+    <string name="enter_name">Enter your name</string>
+    <string name="enter_username">Enter your username</string>
+    <string name="enter_website">Enter your website</string>
+    <string name="enter_bio">Enter your bio</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="enter_phone_number">Enter your phone number</string>
+    <string name="options">Options</string>
+
+    <!-- جنسیت‌ها برای اسپینر -->
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
 </resources>

@@ -1,7 +1,10 @@
 package com.example.gapgram;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,6 +14,8 @@ import com.example.gapgram.databinding.ActivityMainBinding;
 import com.example.gapgram.model.IListResponse;
 import com.example.gapgram.model.Post;
 import com.example.gapgram.serviceCaller.WebserviceCaller;
+import com.example.gapgram.ui.ProfileForm;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,8 +48,44 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        BottomNavigationView bottomNavigationView = findViewById(R.id.menu_bottom);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int itemId = item.getItemId();
+
+                if (itemId == R.id.navigation_home) {
+                    // نمایش Fragment مربوط به Home
+                    return true;
+                } else if (itemId == R.id.navigation_search) {
+                    // نمایش Fragment مربوط به Search
+                    return true;
+                } else if (itemId == R.id.navigation_add) {
+                    // نمایش Fragment مربوط به Add
+                    return true;
+                } else if (itemId == R.id.navigation_notifications) {
+                    // نمایش Fragment مربوط به Notifications
+                    return true;
+                } else if (itemId == R.id.navigation_profile) {
+                    // نمایش فرم پروفایل
+                    openProfileForm();
+                    return true;
+                }
+
+                return false;
+            }
+        });
+
     }
 
+
+    private void openProfileForm() {
+        // اینجا می‌توانید یک Activity جدید باز کنید یا یک DialogFragment برای فرم پروفایل باز کنید
+        // به عنوان مثال:
+        Intent intent = new Intent(this, ProfileForm.class);
+        startActivity(intent);
+    }
+    //end onCreate
     @Override
     public int setContentView() {
         return R.layout.activity_main;
