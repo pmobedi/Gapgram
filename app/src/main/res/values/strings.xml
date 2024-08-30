@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Gapgram</string>
+    <string name="post_image">تصاویر مربوط به پست</string>
+    <string name="profile_image">تصاویر مربوط به پروفایل</string>
+    <string name="like">لایک</string>
+    <string name="comment">نظرات</string>
+    <string name="share">اشتراک گذای</string>
+    <!-- Formats for likes and comments -->
+    <string name="likes_format">%d likes</string>
+    <string name="comments_format">View all %d comments</string>
 </resources>

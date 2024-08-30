@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#f9f9f9</color>
+    <color name="colorPrimaryDark">#efefef</color>
+    <color name="colorAccent">#3896ef</color>
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
+    <color name="colorText">#989898</color>
+    <color name="line_toolbar">#d8d8d8</color>
+    <color name="lines">#dadada</color>
+
+
+    <!-- colors for Edit Profile page -->
+    <color name="textHintPart1">#c6c6c6</color>
+    <color name="lineEditProfile">#c8cacc</color>
+    <color name="textEditPart2">#9b9b9b</color>
+    <color name="texthintPart2">#757575</color>
 </resources>
